@@ -1,0 +1,130 @@
+@import "../../../styles/_variables.css";
+
+/**
+ ** Page
+ */
+.page {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface-back);
+}
+
+/**
+ ** Base component
+ */
+.component {
+    max-width: 370px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--surface-back-focus);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .component {
+        padding: 40px 25px;
+    }
+}
+
+/**
+ ** Heading
+ */
+.heading {
+    max-width: 210px;
+    margin: 0 auto 16px auto;
+
+    line-height: 28px;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+/**
+ ** Description
+ */
+.description {
+    /*max-width: 260px;*/
+    margin: 16px auto 40px auto;
+
+    line-height: 20px;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 576px) {
+    .description {
+        margin: 16px auto 25px auto;
+    }
+}
+
+/**
+ ** Row
+ */
+.row:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+    .row:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+/**
+ ** Link
+ */
+.link {
+    display: inline-block;
+
+    text-decoration: none;
+    text-align: center;
+
+    line-height: 20px;
+    font-size: 15px;
+    color: var(--text-secondary);
+
+    border-bottom: 1px solid var(--text-secondary);
+
+    outline: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+.link:hover,
+.link:focus {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+/**
+ ** Or
+ */
+.or {
+    display: block;
+    margin: 25px 0 15px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--surface-back-focus);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    letter-spacing: .02em;
+    line-height: 1.4;
+    font-size: 12px;
+    color: var(--text-primary);
+}

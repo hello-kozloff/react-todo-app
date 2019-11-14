@@ -9,6 +9,7 @@ import {
 import {
   AuthorizationPage,
   RegisterPage,
+  RegisterConformPage,
   RecoveryPage,
 } from './components/pages';
 
@@ -19,6 +20,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <AuthorizationPage />
+          </Route>
+          <Route path="/register/confirm">
+            <RegisterConformPage />
           </Route>
           <Route path="/register">
             <RegisterPage />
