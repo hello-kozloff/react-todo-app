@@ -1,9 +1,26 @@
 import React from 'react';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+import AuthorizationPage from './components/pages/authorization/Authorization';
+
 function App() {
   return (
     <div className="App">
-      Hello, React Todo App!
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <AuthorizationPage />
+          </Route>
+          <Route path="/">
+            Welcome page
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
