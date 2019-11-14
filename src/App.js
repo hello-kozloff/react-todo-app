@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import AuthorizationPage from './components/pages/authorization/Authorization';
+import RegisterPage from './components/pages/register/Register';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <AuthorizationPage />
+          </Route>
+          <Route path="/register">
+            <RegisterPage />
           </Route>
           <Route path="/">
             Welcome page
