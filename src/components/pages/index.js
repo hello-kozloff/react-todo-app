@@ -1,2 +1,2 @@
-export { default as AuthorizationPage } from './authorization/Authorization';
-export { default as RegisterPage } from './register/Register';
+export { default as AuthorizationPage } from './authorization';
+export { default as RegisterPage } from './register';
