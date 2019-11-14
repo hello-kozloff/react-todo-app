@@ -1,0 +1,203 @@
+@import "../../../styles/_variables.css";
+
+/**
+ ** Base component
+ */
+.component {
+    position: relative;
+
+    width: 100%;
+    display: inline-block;
+}
+
+/**
+ ** Field
+ */
+.field {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: 0 16px;
+
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    color: var(--text-primary);
+
+    cursor: text;
+    outline: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+/**
+ ** Placeholder
+ */
+.placeholder {
+    position: absolute;
+    height: 40px;
+
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 12px;
+
+    box-sizing: border-box;
+    padding: 0 4px;
+    margin: auto;
+
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--text-secondary);
+
+    pointer-events: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+/**
+ ** Theme - Outline
+ */
+.outline > .field {
+    border-color: var(--surface-lines);
+}
+
+/**
+ ** When hover outline
+ */
+:not(.disabled).outline.hover > .field {
+    /* Nothing */
+}
+
+/**
+ ** When focus outline
+ */
+:not(.disabled).outline.focus > .field {
+    border-color: var(--brand-primary);
+}
+
+:not(.disabled).outline.focus.error > .field {
+    border-color: var(--semantic-error);
+}
+
+/**
+ ** When active outline
+ */
+:not(.disabled).outline.active > .field {
+    border-color: var(--brand-primary);
+    border-width: 2px;
+}
+
+:not(.disabled).outline.active.error > .field {
+    border-color: var(--semantic-error);
+}
+
+/**
+ ** Theme - Filled
+ */
+.filled > .field {
+    background-color: var(--surface-lines);
+    border-color: var(--surface-lines);
+}
+
+/**
+ ** When hover filled
+ */
+:not(.disabled).filled.hover > .field,
+:not(.disabled).filled.focus > .field {
+    background-color: var(--color-white);
+}
+
+/**
+ ** When active filled
+ */
+:not(.disabled).filled.active > .field {
+    background-color: var(--color-white);
+    border-color: var(--brand-primary);
+    border-width: 2px;
+}
+
+:not(.disabled).filled.active.error > .field {
+    background-color: var(--color-white);
+    border-color: var(--semantic-error);
+}
+
+/**
+ ** Text
+ */
+.text {
+    width: 100%;
+    display: block;
+
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin-top: 6px;
+
+    line-height: 16px;
+    font-weight: normal;
+    font-size: 12px;
+    color: var(--semantic-error);
+}
+
+/**
+ ** Size - Medium
+ */
+.medium {
+    height: 48px;
+}
+
+.medium > .placeholder {
+    line-height: 40px;
+}
+
+/**
+ ** Size - Large
+ */
+.large {
+    height: 56px;
+}
+
+.large > .placeholder {
+    line-height: 56px;
+}
+
+/**
+ ** When active
+ */
+:not(.disabled).active > .placeholder {
+    height: 20px;
+
+    top: -48px;
+
+    background-color: var(--color-white);
+
+    letter-spacing: .02em;
+    line-height: 20px;
+    font-size: 12px;
+    color: var(--brand-primary);
+}
+
+/**
+ ** When disabled
+ */
+.disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.disabled > .field {
+    cursor: not-allowed;
+}
+
+/**
+ ** When error
+ */
+:not(:disabled).error > .field {
+    border-color: var(--semantic-error);
+}
+
+:not(:disabled).error > .placeholder {
+    color: var(--semantic-error);
+}
