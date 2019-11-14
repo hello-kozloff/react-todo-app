@@ -198,6 +198,10 @@
 /**
  ** When error
  */
+.error {
+    text-align: left;
+}
+
 :not(:disabled).error > .field {
     border-color: var(--semantic-error);
 }
