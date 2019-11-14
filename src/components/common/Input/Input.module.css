@@ -90,6 +90,10 @@
     border-width: 2px;
 }
 
+:not(.disabled).large.outline.active > .placeholder {
+    top: -55px;
+}
+
 :not(.disabled).outline.active.error > .field {
     border-color: var(--semantic-error);
 }
@@ -160,7 +164,7 @@
 }
 
 .large > .placeholder {
-    line-height: 56px;
+    line-height: 40px;
 }
 
 /**
