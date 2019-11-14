@@ -6,8 +6,10 @@ import {
   Route,
 } from 'react-router-dom';
 
-import AuthorizationPage from './components/pages/authorization/Authorization';
-import RegisterPage from './components/pages/register/Register';
+import {
+  AuthorizationPage,
+  RegisterPage,
+} from './components/pages';
 
 function App() {
   return (
