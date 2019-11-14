@@ -9,6 +9,7 @@ import {
 import {
   AuthorizationPage,
   RegisterPage,
+  RecoveryPage,
 } from './components/pages';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/register">
             <RegisterPage />
+          </Route>
+          <Route path="/recovery">
+            <RecoveryPage />
           </Route>
           <Route path="/">
             Welcome page
