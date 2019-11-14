@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import classes from './Register.module.css';
 
 import { Input, Button } from '../../common';
@@ -17,6 +17,7 @@ class RegisterForm extends React.Component {
       passwordError: '',
       repeatedPassword: '',
       repeatedPasswordError: '',
+      redirect: false
     };
   }
 
@@ -26,6 +27,8 @@ class RegisterForm extends React.Component {
    */
   onSubmit = (event) => {
     event.preventDefault();
+
+    let valid = true;
 
     const {
       email,
@@ -38,30 +41,56 @@ class RegisterForm extends React.Component {
       this.setState({
         emailError: 'Введите в поле Email',
       });
+
+      valid = false;
+    } else {
+      this.setState({ emailError: '' });
     }
 
     if (!login) {
       this.setState({
         loginError: 'Введите в поле Логин',
       });
+
+      valid = false;
+    } else {
+      this.setState({ loginError: '' });
     }
 
     if (!password) {
       this.setState({
         passwordError: 'Введите в поле Пароль',
       });
+
+      valid = false;
+    } else {
+      this.setState({ passwordError: '' });
     }
 
     if (!repeatedPassword) {
       this.setState({
         repeatedPasswordError: 'Введите в поле Повторите пароль',
       });
+
+      valid = false;
+    } else {
+      this.setState({ repeatedPasswordError: '' });
     }
 
     if (password !== repeatedPassword) {
       this.setState({
         passwordError: 'Введенные пароли не совпадают',
         repeatedPasswordError: 'Введенные пароли не совпадают',
+      });
+
+      valid = false;
+    } else {
+      this.setState({ repeatedPasswordError: '' });
+    }
+
+    if (valid === true) {
+      this.setState({
+        redirect: true,
       });
     }
   };
@@ -92,7 +121,12 @@ class RegisterForm extends React.Component {
       passwordError,
       repeatedPassword,
       repeatedPasswordError,
+      redirect,
     } = this.state;
+
+    if (redirect) {
+      return <Redirect to="/register/confirm" />;
+    }
 
     return (
       <form
