@@ -17,6 +17,8 @@
 
     --surface-lines: rgb(216, 218, 230);
     --surface-back: rgb(240, 241, 245);
+    --surface-back-focus: rgb(230, 231, 235);
+    --surface-back-pressed: rgb(220, 221, 225);
 
     --transition-delay: 250ms;
     --transition-type: ease;
