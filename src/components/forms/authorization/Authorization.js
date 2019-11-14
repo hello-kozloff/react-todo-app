@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Authorization.module.css';
 
 import { Input, Button } from '../../common';
-import { Link } from 'react-router-dom';
 
 class AuthorizationForm extends React.Component {
   constructor(props) {
