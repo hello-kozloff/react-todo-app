@@ -1,0 +1,74 @@
+@import "../../../styles/_variables.css";
+
+/**
+ ** Base component
+ */
+.component {
+    max-width: 370px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--surface-back-focus);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+/**
+ ** Heading
+ */
+.heading {
+    margin: 0 0 16px;
+
+    line-height: 28px;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+/**
+ ** Description
+ */
+.description {
+    max-width: 270px;
+    margin: 16px auto 40px auto;
+
+    line-height: 20px;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+/**
+ ** Row
+ */
+.row:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+/**
+ ** Remember
+ */
+.remember {
+    display: inline-block;
+
+    text-decoration: none;
+    text-align: center;
+
+    line-height: 20px;
+    font-size: 15px;
+    color: var(--text-secondary);
+
+    border-bottom: 1px solid var(--text-secondary);
+
+    outline: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+.remember:hover,
+.remember:focus {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
