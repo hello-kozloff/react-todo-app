@@ -32,6 +32,13 @@
     transition: var(--transition-delay) var(--transition-type);
 }
 
+.field:-webkit-autofill,
+.field:-webkit-autofill:hover,
+.field:-webkit-autofill:focus,
+.field:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 /**
  ** Placeholder
  */
