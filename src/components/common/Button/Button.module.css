@@ -1,0 +1,121 @@
+@import "../../../styles/_variables.css";
+
+/**
+ ** Base component
+ */
+.component {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+/**
+ ** Theme - Primary
+ */
+.primary {
+    background: var(--brand-primary);
+    color: rgb(255, 255, 255);
+}
+
+.primary:not(.disabled):hover,
+.primary:not(.disabled):focus {
+    background: var(--brand-primary-focus);
+}
+
+.primary:not(.disabled):active {
+    background: var(--brand-primary-pressed);
+}
+
+/**
+ ** Theme - Secondary
+ */
+.secondary {
+    background: var(--surface-back);
+    color: var(--brand-primary);
+}
+
+.secondary:not(.disabled):hover,
+.secondary:not(.disabled):focus {
+    background: var(--surface-back-focus);
+}
+
+.secondary:not(.disabled):active {
+    background: var(--surface-back-pressed);
+}
+
+/**
+ ** Theme - Tertiary
+ */
+.tertiary {
+    background: transparent;
+    color: var(--brand-primary);
+}
+
+.tertiary:not(.disabled):hover,
+.tertiary:not(.disabled):focus {
+    background: var(--surface-back);
+}
+
+.tertiary:not(.disabled):active {
+    background: var(--surface-back-focus);
+}
+
+/**
+ ** Size - Small
+ */
+.small {
+    padding: 0 16px;
+
+    font-weight: 600;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+/**
+ ** Size - Medium
+ */
+.medium {
+    padding: 0 24px;
+
+    line-height: 46px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/**
+ ** Size - Large
+ */
+.large {
+    padding: 0 24px;
+
+    line-height: 56px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/**
+ ** Is wide
+ */
+.wide {
+    width: 100%;
+    display: block;
+
+    text-align: center;
+}
+
+/**
+ ** When disabled
+ */
+.disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
