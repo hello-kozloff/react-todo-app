@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Authorization.module.css';
 
 import { Input, Button } from '../../common';
+import { Link } from 'react-router-dom';
 
 class AuthorizationForm extends React.Component {
   constructor(props) {
@@ -111,15 +112,15 @@ class AuthorizationForm extends React.Component {
           </Button>
         </div>
         <div className={classes.row}>
-          <a href="/" className={classes.link}>
+          <Link to="/recovery" className={classes.link}>
             Забыли свой пароль?
-          </a>
+          </Link>
           <span className={classes.or}>
             Вы все еще не зарегистрированы?
           </span>
-          <a href="/" className={classes.link}>
+          <Link to="/register" className={classes.link}>
             Создать новый аккаунт
-          </a>
+          </Link>
         </div>
       </form>
     );
