@@ -111,8 +111,14 @@ class AuthorizationForm extends React.Component {
           </Button>
         </div>
         <div className={classes.row}>
-          <a href="/" className={classes.remember}>
+          <a href="/" className={classes.link}>
             Забыли свой пароль?
+          </a>
+          <span className={classes.or}>
+            Вы все еще не зарегистрированы?
+          </span>
+          <a href="/" className={classes.link}>
+            Создать новый аккаунт
           </a>
         </div>
       </form>
