@@ -17,7 +17,7 @@ class RegisterForm extends React.Component {
       passwordError: '',
       repeatedPassword: '',
       repeatedPasswordError: '',
-      redirect: false
+      redirect: false,
     };
   }
 
