@@ -29,12 +29,16 @@ class AuthorizationForm extends React.Component {
       this.setState({
         emailError: 'Введите в поле Email',
       });
+    } else {
+      this.setState({ emailError: '' });
     }
 
     if (!password) {
       this.setState({
         passwordError: 'Введите в поле Пароль',
       });
+    } else {
+      this.setState({ passwordError: '' });
     }
   };
 
