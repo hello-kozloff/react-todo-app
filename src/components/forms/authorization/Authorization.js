@@ -3,7 +3,7 @@ import classes from './Authorization.module.css';
 
 import { Input, Button } from '../../common';
 
-class Authorization extends React.Component {
+class AuthorizationForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -120,4 +120,4 @@ class Authorization extends React.Component {
   }
 }
 
-export default Authorization;
+export default AuthorizationForm;
