@@ -11,6 +11,7 @@ import {
   RegisterPage,
   RegisterConformPage,
   RecoveryPage,
+  ProjectsPage,
 } from './components/pages';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/recovery">
             <RecoveryPage />
+          </Route>
+          <Route path="/projects">
+            <ProjectsPage />
           </Route>
           <Route path="/">
             Welcome page
