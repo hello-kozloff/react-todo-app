@@ -9,6 +9,7 @@
 
     box-sizing: border-box;
     padding: 40px;
+    margin: 0 auto;
 
     background-color: var(--color-white);
     border: 1px solid var(--surface-back-focus);
