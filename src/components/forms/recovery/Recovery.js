@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import classes from '../../../styles/Form.module.css';
 
+import { Link } from 'react-router-dom';
 import { Input, Button } from '../../common';
+
+import classes from '../../../styles/Form.module.css';
 
 class RecoveryForm extends React.Component {
   constructor(props) {
