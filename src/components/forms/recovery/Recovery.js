@@ -1,9 +1,11 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import { Link } from 'react-router-dom';
 import { Input, Button } from '../../common';
 
-import classes from '../../../styles/Form.module.css';
+import formClasses from '../../../styles/Form.module.css';
+import recoveryClasses from './Recovery.module.css';
 
 class RecoveryForm extends React.Component {
   constructor(props) {
@@ -55,18 +57,22 @@ class RecoveryForm extends React.Component {
 
     return (
       <form
-        className={classes.component}
+        className={formClasses.component}
         onSubmit={this.onSubmit}
       >
-        <div className={classes.row}>
-          <h1 className={classes.heading}>
+        <div className={formClasses.row}>
+          <h1 className={classNames(
+            formClasses.heading,
+            recoveryClasses.heading,
+          )}
+          >
             Восстановление доступа
           </h1>
-          <p className={classes.description}>
+          <p className={formClasses.description}>
             Вы можете восстановить пароль, если помните логин или e-mail
           </p>
         </div>
-        <div className={classes.row}>
+        <div className={formClasses.row}>
           <Input
             type="text"
             name="payload"
@@ -79,7 +85,7 @@ class RecoveryForm extends React.Component {
             onChange={(event) => this.onChange('payload', event)}
           />
         </div>
-        <div className={classes.row}>
+        <div className={formClasses.row}>
           <Button
             type="submit"
             theme="primary"
@@ -89,11 +95,11 @@ class RecoveryForm extends React.Component {
             Далее
           </Button>
         </div>
-        <div className={classes.row}>
-          <span className={classes.or}>
+        <div className={formClasses.row}>
+          <span className={formClasses.or}>
             Вспомнили пароль?
           </span>
-          <Link to="/login" className={classes.link}>
+          <Link to="/login" className={formClasses.link}>
             Войти в аккаунт
           </Link>
         </div>
