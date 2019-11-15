@@ -1,0 +1,62 @@
+@import "../../../styles/main.css";
+
+/**
+ ** Component
+ */
+.component {
+    max-width: 1200px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 0 auto;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--surface-back-focus);
+    border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+    .component {
+        padding: 25px;
+    }
+}
+
+/**
+ ** Header
+ */
+.header {
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**
+ ** Heading
+ */
+.heading {
+    margin: 0;
+
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+/**
+ ** Actions
+ */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+/**
+ ** Empty
+ */
+.empty {
+    padding: 25px 0;
+
+    text-align: center;
+    color: var(--text-secondary);
+}
