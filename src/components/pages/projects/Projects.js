@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Button, ProjectCard } from '../../common';
 
 import pageClasses from '../../../styles/Page.module.css';
@@ -50,13 +51,15 @@ class ProjectsPage extends React.Component {
               ):
             </h1>
             <div className={projectsClasses.actions}>
-              <Button
-                type="button"
-                theme="primary"
-                size="small"
-              >
-                Создать проект
-              </Button>
+              <Link to="/project/create/">
+                <Button
+                  type="button"
+                  theme="primary"
+                  size="small"
+                >
+                  Создать проект
+                </Button>
+              </Link>
             </div>
           </header>
           {
