@@ -1,8 +1,9 @@
 import React from 'react';
-import { Redirect, Link } from 'react-router-dom';
-import classes from '../../../styles/Form.module.css';
 
+import { Redirect, Link } from 'react-router-dom';
 import { Input, Button } from '../../common';
+
+import classes from '../../../styles/Form.module.css';
 
 class RegisterForm extends React.Component {
   constructor(props) {
