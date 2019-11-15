@@ -15,7 +15,7 @@ function getFormatName(name) {
   let validName = '';
 
   if (name.length >= MAX_NAME_LENGTH) {
-    validName = name.slice(0, MAX_NAME_LENGTH) + '...';
+    validName = `${name.slice(0, MAX_NAME_LENGTH)}...`;
   } else {
     validName = name;
   }
