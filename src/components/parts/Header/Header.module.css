@@ -4,8 +4,12 @@
  ** Component
  */
 .component {
+    box-sizing: border-box;
+
     padding: 15px 0;
     margin-bottom: 25px;
+
+    border-bottom: 1px solid var(--surface-back-focus);
     background-color: var(--text-invert);
 }
 
