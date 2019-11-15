@@ -9,8 +9,8 @@
     padding: 15px 0;
     margin-bottom: 25px;
 
-    border-bottom: 1px solid var(--surface-back-focus);
     background-color: var(--text-invert);
+    box-shadow: 0 1px 0 var(--surface-back-focus);
 }
 
 @media (max-width: 576px) {
