@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Register.module.css';
+import classes from '../../../styles/Page.module.css';
 
 import { RegisterForm } from '../../forms';
 
 const RegisterPage = () => (
-  <div className={classes.page}>
+  <div className={classes.container}>
     <RegisterForm />
   </div>
 );

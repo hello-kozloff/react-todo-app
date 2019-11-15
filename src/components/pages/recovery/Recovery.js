@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Recovery.module.css';
+import classes from '../../../styles/Page.module.css';
 
 import { RecoveryForm } from '../../forms';
 
 const RecoveryPage = () => (
-  <div className={classes.page}>
+  <div className={classes.container}>
     <RecoveryForm />
   </div>
 );

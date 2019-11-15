@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Authorization.module.css';
+import classes from '../../../styles/Page.module.css';
 
 import { AuthorizationForm } from '../../forms';
 
 const AuthorizationPage = () => (
-  <div className={classes.page}>
+  <div className={classes.container}>
     <AuthorizationForm />
   </div>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Projects.module.css';
+import classes from '../../../styles/Page.module.css';
 
 class ProjectsPage extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class ProjectsPage extends React.Component {
 
   render() {
     return (
-      <div className={classes.page}>
+      <div className={classes.container}>
         hello world
       </div>
     );

@@ -1,3 +1,5 @@
+@import "./_variables.css";
+
 /**
  ** Base component
  */
@@ -25,7 +27,8 @@
  ** Heading
  */
 .heading {
-    margin: 0 0 16px;
+    max-width: 210px;
+    margin: 0 auto 16px auto;
 
     line-height: 28px;
     font-size: 18px;
@@ -36,7 +39,7 @@
  ** Description
  */
 .description {
-    max-width: 270px;
+    /*max-width: 260px;*/
     margin: 16px auto 40px auto;
 
     line-height: 20px;

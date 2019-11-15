@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classes from './Authorization.module.css';
+import classes from '../../../styles/Form.module.css';
 
 import { Input, Button } from '../../common';
 

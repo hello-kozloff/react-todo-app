@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
-import classes from './Register.module.css';
+import classes from '../../../styles/Form.module.css';
 
 import { Input, Button } from '../../common';
 
