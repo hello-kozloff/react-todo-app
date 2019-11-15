@@ -17,3 +17,15 @@
         min-height: calc(100vh - 107px - 15px);
     }
 }
+
+/**
+ ** AnimatedSwitch
+ */
+.animatedSwitch {
+    position: relative;
+}
+
+.animatedSwitch > div {
+    position: absolute;
+    width: 100%;
+}

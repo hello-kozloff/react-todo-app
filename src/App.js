@@ -2,9 +2,10 @@ import React from 'react';
 
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
 } from 'react-router-dom';
+
+import { AnimatedSwitch } from 'react-router-transition';
 
 import {
   AuthorizationPage,
@@ -12,16 +13,27 @@ import {
   RegisterConformPage,
   RecoveryPage,
   ProjectsPage,
+  ProjectPage,
 } from './components/pages';
 
 import Header from './components/parts/Header';
+
+import pageClasses from './styles/Page.module.css';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Header />
-        <Switch>
+        <AnimatedSwitch
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 0 }}
+          atActive={{ opacity: 1 }}
+          className={pageClasses.animatedSwitch}
+        >
+          <Route exact path="/">
+            Welcome page
+          </Route>
           <Route path="/login">
             <AuthorizationPage />
           </Route>
@@ -37,10 +49,16 @@ function App() {
           <Route path="/projects">
             <ProjectsPage />
           </Route>
-          <Route path="/">
-            Welcome page
+          <Route
+            path="/project/create"
+          >
+            Create page
           </Route>
-        </Switch>
+          <Route
+            path="/project/:slug"
+            component={ProjectPage}
+          />
+        </AnimatedSwitch>
       </Router>
     </div>
   );
