@@ -12,13 +12,21 @@ const Header = () => (
         Todo Application
       </Link>
       <div className={classes.auth}>
-        <Link to="/login">
-          <Button type="button" theme="primary" size="small">
+        <Link tabIndex="-1" to="/login">
+          <Button
+            type="button"
+            theme="primary"
+            size="small"
+          >
             Войти
           </Button>
         </Link>
-        <Link to="/register">
-          <Button type="button" theme="secondary" size="small">
+        <Link tabIndex="-1" to="/register">
+          <Button
+            type="button"
+            theme="secondary"
+            size="small"
+          >
             Регистрация
           </Button>
         </Link>
