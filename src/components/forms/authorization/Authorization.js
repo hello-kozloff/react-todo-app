@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import classes from '../../../styles/Form.module.css';
+import classNames from 'classnames';
 
+import { Link } from 'react-router-dom';
 import { Input, Button } from '../../common';
+
+import pageClasses from './Authorization.module.css';
+import formClasses from '../../../styles/Form.module.css';
 
 class AuthorizationForm extends React.Component {
   constructor(props) {
@@ -68,18 +71,22 @@ class AuthorizationForm extends React.Component {
 
     return (
       <form
-        className={classes.component}
+        className={formClasses.component}
         onSubmit={this.onSubmit}
       >
-        <div className={classes.row}>
-          <h1 className={classes.heading}>
+        <div className={formClasses.row}>
+          <h1 className={formClasses.heading}>
             Войдите
           </h1>
-          <p className={classes.description}>
+          <p className={classNames(
+            formClasses.description,
+            pageClasses.description,
+          )}
+          >
             Введите данные, которые вы вводили при регистрации
           </p>
         </div>
-        <div className={classes.row}>
+        <div className={formClasses.row}>
           <Input
             type="email"
             name="email"
@@ -92,7 +99,7 @@ class AuthorizationForm extends React.Component {
             onChange={(event) => this.onChange('email', event)}
           />
         </div>
-        <div className={classes.row}>
+        <div className={formClasses.row}>
           <Input
             type="password"
             name="password"
@@ -105,7 +112,7 @@ class AuthorizationForm extends React.Component {
             onChange={(event) => this.onChange('password', event)}
           />
         </div>
-        <div className={classes.row}>
+        <div className={formClasses.row}>
           <Button
             type="submit"
             theme="primary"
@@ -115,14 +122,14 @@ class AuthorizationForm extends React.Component {
             Войти
           </Button>
         </div>
-        <div className={classes.row}>
-          <Link to="/recovery" className={classes.link}>
+        <div className={formClasses.row}>
+          <Link to="/recovery" className={formClasses.link}>
             Забыли свой пароль?
           </Link>
-          <span className={classes.or}>
+          <span className={formClasses.or}>
             Вы все еще не зарегистрированы?
           </span>
-          <Link to="/register" className={classes.link}>
+          <Link to="/register" className={formClasses.link}>
             Создать новый аккаунт
           </Link>
         </div>
