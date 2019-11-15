@@ -1,0 +1,67 @@
+@import "../../../styles/main.css";
+
+/**
+ ** Component
+ */
+.component {
+    padding: 15px 0;
+    margin-bottom: 25px;
+    background-color: var(--text-invert);
+}
+
+@media (max-width: 576px) {
+    .component {
+        margin-bottom: 15px;
+    }
+}
+
+/**
+ ** Container
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/**
+ ** Logo
+ */
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text-primary);
+
+    outline: none;
+
+    transition: var(--transition-delay) var(--transition-type);
+}
+
+.logo:hover,
+.logo:focus {
+    color: var(--brand-primary);
+}
+
+@media (max-width: 576px) {
+    .logo {
+        margin-bottom: 15px;
+    }
+}
+
+/**
+ ** Auth
+ */
+.auth > a:not(:first-child) {
+    margin-left: 15px;
+}

@@ -14,10 +14,13 @@ import {
   ProjectsPage,
 } from './components/pages';
 
+import Header from './components/parts/Header';
+
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
           <Route path="/login">
             <AuthorizationPage />
