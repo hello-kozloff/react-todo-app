@@ -18,7 +18,7 @@ class ProjectsPage extends React.Component {
         },
         {
           slug: 'development-of-bridge',
-          name: 'Очнь длинный заголовок проекта, который обязательно должен быть обрезан, сейчас мы это сделаем',
+          name: 'Строительство моста',
           thumbnailUrl: 'https://images.unsplash.com/photo-1568475734433-6d2c050b5749?ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
         },
         {
