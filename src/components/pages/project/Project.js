@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TasksContainer } from '../../common';
-
 import pageClasses from '../../../styles/Page.module.css';
 
 class ProjectPage extends React.Component {
@@ -22,7 +20,7 @@ class ProjectPage extends React.Component {
   render() {
     return (
       <div className={pageClasses.container}>
-        <TasksContainer />
+        Hello world
       </div>
     );
   }
