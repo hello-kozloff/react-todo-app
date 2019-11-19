@@ -1,0 +1,40 @@
+@import "../../../styles/_variables.css";
+
+/**
+ ** Component
+ */
+.component {
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--surface-back-focus);
+    border-radius: 10px;
+}
+
+/**
+ ** Heading
+ */
+.heading {
+    margin: 0 auto 0 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+/**
+ ** Actions
+ */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+/**
+ ** Action
+ */
+.action:not(:first-child) {
+    margin-left: 15px;
+}
