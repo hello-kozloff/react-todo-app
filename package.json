@@ -91,7 +91,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.0.1"
+    "eslint-config-airbnb": "^18.0.1",
+    "redux-devtools-extension": "^2.13.8"
   },
   "jest": {
     "roots": [
